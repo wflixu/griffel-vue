@@ -1,6 +1,6 @@
 {
   "name": "griffel-vue",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Vue3 版本的高性能 CSS-in-JS 解决方案，基于 @griffel/react。",
   "type": "module",
   "license": "MIT",
@@ -14,7 +14,8 @@
   },
   "author": "wflixu <wflixu@88.com>",
   "files": [
-    "dist"
+    "dist",
+    "package.json"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
