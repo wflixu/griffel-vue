@@ -1,0 +1,61 @@
+{
+  "name": "griffel-vue",
+  "version": "0.0.1",
+  "description": "Vue3 版本的高性能 CSS-in-JS 解决方案，基于 @griffel/react。",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/wflixu/griffel-vue#readme",
+  "bugs": {
+    "url": "https://github.com/wflixu/griffel-vue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wflixu/griffel-vue.git"
+  },
+  "author": "wflixu <wflixu@88.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest",
+    "directory": "dist"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "playground": "vite",
+    "test": "vitest",
+    "typecheck": "vue-tsc --noEmit",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@griffel/core": "^1.19.2"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/test-utils": "^2.4.6",
+    "bumpp": "^10.1.0",
+    "happy-dom": "^17.4.7",
+    "tsdown": "^0.11.9",
+    "typescript": "^5.8.3",
+    "vite": "npm:rolldown-vite@latest",
+    "vitest": "^3.1.3",
+    "vue": "^3.5.13",
+    "vue-tsc": "^3.0.3"
+  }
+}
