@@ -28,7 +28,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "latest",
-    "directory": "dist",
     "git-checks": false
   },
   "scripts": {
