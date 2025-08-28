@@ -25,10 +25,8 @@
     "./package.json": "./package.json"
   },
   "publishConfig": {
-    "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "latest",
-    "directory": "./",
     "git-checks": false
   },
   "scripts": {
