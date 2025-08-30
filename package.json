@@ -1,6 +1,6 @@
 {
   "name": "griffel-vue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vue3 版本的高性能 CSS-in-JS 解决方案，基于 @griffel/react。",
   "type": "module",
   "license": "MIT",
@@ -8,6 +8,17 @@
   "bugs": {
     "url": "https://github.com/wflixu/griffel-vue/issues"
   },
+  "keywords": [
+    "vue",
+    "css-in-js",
+    "griffel",
+    "griffel-vue",
+    "Vue3",
+    "styling",
+    "css",
+    "typescript",
+    "vite"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wflixu/griffel-vue.git"
