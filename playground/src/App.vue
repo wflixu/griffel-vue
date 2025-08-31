@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { MyButton } from '../../src'
+import { useRenderer_unstable } from '../../src';
+// import { HelloWorld } from './HelloWorld';
+import HelloWorld from './HelloWorld.vue';
+// 导入渲染器，这一步是必须的
+useRenderer_unstable()
 </script>
 
 <template>
-  <MyButton type="primary" />
+  <div>
+    <HelloWorld />
+  </div>
 </template>

@@ -17,22 +17,42 @@ npm install griffel-vue
 
 ## 快速上手
 
-```ts
-import { RendererProvider, useRenderer } from 'griffel-vue';
+```vue
+// App.vue
+<script setup lang="ts">
+import { useRenderer_unstable } from 'griffel-vue';
+import { HelloWorld } from './HelloWorld';
+// 导入渲染器，这一步是必须的
+useRenderer_unstable()
+</script>
 
-const App = {
-  setup() {
-    const renderer = useRenderer();
-    // 使用 renderer 生成样式
-  },
-  render() {
-    return (
-      <RendererProvider renderer={renderer}>
-        {/* 你的组件 */}
-      </RendererProvider>
-    );
-  }
-};
+<template>
+  <div>
+    <HelloWorld />
+  </div>
+</template>
+
+//HelloWorld.vue
+
+<template>
+    <div>
+        <button :class="classes.button">test </button>
+        <span :class="classes.icon">textt</span>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { useClasses } from './css';
+const classes = useClasses();
+</script>
+
+// css.tsx
+import { makeStyles } from 'griffel-vue';
+
+export const useClasses = makeStyles({
+    button: { color: 'red' },
+    icon: { paddingLeft: '5px' },
+});
 ```
 
 ## 开发

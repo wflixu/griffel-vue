@@ -39,7 +39,7 @@ export const RendererProvider = defineComponent<RendererProviderProps>({
     );
 
     provide('RendererContextKey', props.renderer);
-    return () => h('div', {}, slots.default ? slots.default() : []);
+    return () => h('div', { class: 'test' }, slots.default ? slots.default() : []);
   },
 });
 

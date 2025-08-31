@@ -1,6 +1,6 @@
 {
   "name": "griffel-vue",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Vue3 版本的高性能 CSS-in-JS 解决方案，基于 @griffel/react。",
   "type": "module",
   "license": "MIT",
@@ -43,7 +43,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "playground": "vite",
+    "play": "vite",
     "test": "vitest",
     "typecheck": "vue-tsc --noEmit",
     "release": "bumpp && pnpm publish",
@@ -59,6 +59,7 @@
   "devDependencies": {
     "@types/node": "^22.15.17",
     "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue-jsx": "^5.1.1",
     "@vue/test-utils": "^2.4.6",
     "bumpp": "^10.1.0",
     "happy-dom": "^17.4.7",
