@@ -1,4 +1,4 @@
-import { provide, inject, defineComponent, h, type InjectionKey } from 'vue';
+import { provide, inject, defineComponent, h, type InjectionKey, computed, type Ref } from 'vue';
 
 export type TextDirection = 'ltr' | 'rtl'
 
@@ -7,10 +7,7 @@ export interface TextDirectionProviderProps {
   dir: TextDirection;
 }
 
-/**
- * @private
- */
-const TextDirectionContextKey: InjectionKey<TextDirection> = Symbol('TextDirection');
+export const TextDirectionContextKey: InjectionKey<Ref<TextDirection>> = Symbol('TextDirection');
 
 /**
  * @public
@@ -25,7 +22,8 @@ export const TextDirectionProvider = defineComponent<TextDirectionProviderProps>
     }
   },
   setup(props, { slots }) {
-    provide(TextDirectionContextKey, props.dir);
+    const dir = computed(() => props.dir);
+    provide(TextDirectionContextKey, dir);
     return () => slots.default?.();
   },
 });

@@ -1,5 +1,5 @@
 import { createDOMRenderer, rehydrateRendererCache } from '@griffel/core';
-import { provide, inject, defineComponent, watch, onMounted, onBeforeMount, watchEffect } from 'vue';
+import { provide, inject, defineComponent, watchEffect } from 'vue';
 import { canUseDOM } from './utils';
 import type { GriffelRenderer } from '@griffel/core';
 import type { InjectionKey } from 'vue';
