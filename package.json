@@ -53,13 +53,14 @@
     "@griffel/core": "^1.19.2"
   },
   "peerDependencies": {
-    "vue": "^3.0.0",
-    "tslib": "^2.1.0"
+    "tslib": "^2.1.0",
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.17",
     "@vitejs/plugin-vue": "6.0.1",
     "@vitejs/plugin-vue-jsx": "^5.1.1",
+    "@vue/server-renderer": "3.5.20",
     "@vue/test-utils": "^2.4.6",
     "bumpp": "^10.1.0",
     "happy-dom": "18.0.1",
