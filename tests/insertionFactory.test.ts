@@ -1,5 +1,5 @@
 
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { insertionFactory } from '../src/insertionFactory' // 请根据实际路径调整
 import { useInsertionEffect } from '../src/useInsertionEffect'
 import { canUseDOM } from '../src/utils'

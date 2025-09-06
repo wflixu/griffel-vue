@@ -69,3 +69,12 @@ Number of calls: 1
   expect(mockCreateDOMRenderer).toHaveBeenCalledTimes(1) ` 实际运行测试，全部通过了，我们继续下一个文件的测试用例编写
 
 实际运行后，这个测试文件全部通过了，下一个文件，我们继续 renderToStyleElements.test.ts 文件 单元测试用的编写，它的代码如下：```  ```, 请帮我写单元测试用例
+
+
+你写的太多太笼统了，我们一步一步来，现在把这大的任务分为几个小任务：
+1. pr 到github main分支上出发 测试和构建
+2. 创建release 的时候，发布npm包
+3. 优化readme 文件，在npm 中能更好的显示，
+目前开始做 1 出发单元测试， 配置 unit-test.yaml 文件 是这样的：``` ```，这歌配置可能不对，请检查优化这个文件
+
+这是另一个 release.yaml配置文件，是发布npm 包用的，我想改变出触发条件，但创建

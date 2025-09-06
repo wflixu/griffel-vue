@@ -1,4 +1,4 @@
-import { provide, inject, defineComponent, h, type InjectionKey, computed, type Ref } from 'vue';
+import { provide, inject, defineComponent, type InjectionKey, computed, type Ref } from 'vue';
 
 export type TextDirection = 'ltr' | 'rtl'
 

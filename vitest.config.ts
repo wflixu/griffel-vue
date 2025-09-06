@@ -7,5 +7,10 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   test: {
     environment: 'happy-dom',
+    coverage: {
+      provider: 'v8', // or 'istanbul',
+      include: ['src/**.{ts,tsx}'],
+      exclude: ['src/__**.{ts,tsx}']
+    },
   },
 })
