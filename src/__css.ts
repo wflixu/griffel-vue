@@ -8,7 +8,6 @@ import { useTextDirection } from './TextDirectionContext';
  *
  * @internal
  */
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export function __css<Slots extends string>(classesMapBySlot: CSSClassesMapBySlot<Slots>) {
   const getStyles = vanillaCSS(classesMapBySlot);
 

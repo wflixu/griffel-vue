@@ -10,7 +10,6 @@ import { useTextDirection } from './TextDirectionContext';
  *
  * @internal
  */
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export function __resetStyles(
   ltrClassName: string,
   rtlClassName: string | null,

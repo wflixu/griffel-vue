@@ -1,6 +1,6 @@
 # griffel-vue
 
-基于 [@griffel/react](https://github.com/microsoft/griffel) 的 Vue3 版本，提供高性能的 CSS-in-JS 解决方案，支持响应式样式和 SSR。
+基于 [@griffel/core](https://github.com/microsoft/griffel) 的 Vue3 版本，提供高性能的 CSS-in-JS 解决方案，支持响应式样式和 SSR。
 
 ## 特性
 

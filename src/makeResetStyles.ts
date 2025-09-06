@@ -4,7 +4,8 @@ import type { GriffelResetStyle } from '@griffel/core';
 import { insertionFactory } from './insertionFactory';
 import { useRenderer } from './RendererContext';
 import { useTextDirection } from './TextDirectionContext';
-import { isInsideComponent } from './utils/isInsideComponent';
+import { isInsideComponent } from './utils';
+
 
 export function makeResetStyles(styles: GriffelResetStyle) {
   const getStyles = vanillaMakeResetStyles(styles, insertionFactory);
