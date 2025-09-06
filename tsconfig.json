@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "types": [
       "node",
-      "environment"
+      "vitest/importMeta"
     ],
     "strict": true,
     "noUnusedLocals": true,
@@ -25,8 +25,7 @@
     "skipLibCheck": true
   },
   "include": [
-    "src",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx",
   ]
 }

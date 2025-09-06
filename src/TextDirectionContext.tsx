@@ -1,14 +1,13 @@
-import { provide, inject, defineComponent, h } from 'vue';
+import { provide, inject, defineComponent, type InjectionKey, computed, type Ref } from 'vue';
+
+export type TextDirection = 'ltr' | 'rtl'
 
 export interface TextDirectionProviderProps {
   /** Indicates the directionality of the element's text. */
-  dir: 'ltr' | 'rtl';
+  dir: TextDirection;
 }
 
-/**
- * @private
- */
-const TextDirectionContextKey = Symbol('TextDirectionContext');
+export const TextDirectionContextKey: InjectionKey<Ref<TextDirection>> = Symbol('TextDirection');
 
 /**
  * @public
@@ -16,11 +15,16 @@ const TextDirectionContextKey = Symbol('TextDirectionContext');
 export const TextDirectionProvider = defineComponent<TextDirectionProviderProps>({
   name: 'TextDirectionProvider',
   props: {
-    dir: { type: String as () => 'ltr' | 'rtl', required: true },
+    dir: {
+      type: String as () => TextDirection,
+      default: 'ltr' as TextDirection,
+      required: false
+    }
   },
   setup(props, { slots }) {
-    provide(TextDirectionContextKey, props.dir);
-    return () => h('div', {}, slots.default ? slots.default() : []);
+    const dir = computed(() => props.dir);
+    provide(TextDirectionContextKey, dir);
+    return () => slots.default?.();
   },
 });
 
@@ -29,6 +33,6 @@ export const TextDirectionProvider = defineComponent<TextDirectionProviderProps>
  *
  * @private
  */
-export function useTextDirection(): 'ltr' | 'rtl' {
-  return inject<'ltr' | 'rtl'>(TextDirectionContextKey, 'ltr');
+export function useTextDirection(): TextDirection {
+  return inject<TextDirection>(TextDirectionContextKey, 'ltr');
 }

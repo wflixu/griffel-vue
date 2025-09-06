@@ -1,9 +1,16 @@
-import Vue from '@vitejs/plugin-vue'
+/// <reference types="vitest/config" />
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-  plugins: [Vue()],
+  plugins: [vue(), vueJsx()],
   test: {
     environment: 'happy-dom',
+    coverage: {
+      provider: 'v8', // or 'istanbul',
+      include: ['src/**.{ts,tsx}'],
+      exclude: ['src/__**.{ts,tsx}']
+    },
   },
 })

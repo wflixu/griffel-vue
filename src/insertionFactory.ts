@@ -1,7 +1,8 @@
 import type { CSSRulesByBucket, GriffelInsertionFactory, GriffelRenderer } from '@griffel/core';
 
-import { canUseDOM } from './utils/canUseDOM';
+
 import { useInsertionEffect } from './useInsertionEffect';
+import { canUseDOM } from './utils';
 
 export const insertionFactory: GriffelInsertionFactory = () => {
   const insertionCache: Record<string, boolean> = {};
@@ -11,8 +12,7 @@ export const insertionFactory: GriffelInsertionFactory = () => {
     if (useInsertionEffect && canUseDOM()) {
       useInsertionEffect(() => {
         renderer.insertCSSRules(cssRules!);
-      });
-
+      }, [renderer, cssRules]);
       return;
     }
 
