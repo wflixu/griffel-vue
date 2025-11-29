@@ -1,6 +1,6 @@
 {
   "name": "griffel-vue",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Vue3 版本的高性能 CSS-in-JS 解决方案，基于 @griffel/core。",
   "type": "module",
   "license": "MIT",
